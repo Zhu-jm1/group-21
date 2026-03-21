@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>登录 - BUPT TA 招聘系统</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+</head>
+<body class="bg-slate-50 flex items-center justify-center min-h-screen">
+<div class="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 border border-slate-100">
+<div class="text-center mb-8">
+<div class="bg-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-blue-200">
+<span class="iconify text-white text-3xl" data-icon="mdi:school"></span>
+</div>
+<h1 class="text-2xl font-bold text-slate-800">BUPT TA 招聘系统</h1>
+<p class="text-slate-500 mt-2">2026 春季学期人才招募</p>
+</div>
+<div class="space-y-4">
+<div>
+<label class="block text-sm font-medium text-slate-700 mb-1">账号</label>
+<input class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="学号 / 工号" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 mb-1">密码</label>
+<input class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="••••••••" type="password"/>
+</div>
+<div class="pt-4 border-t border-slate-100">
+<p class="text-xs text-slate-400 mb-3 text-center uppercase tracking-wider font-semibold">快速身份模拟入口</p>
+<div class="grid grid-cols-1 gap-3">
+<a class="flex items-center justify-between w-full px-4 py-3 bg-blue-50 text-blue-700 rounded-xl hover:bg-blue-100 transition shadow-sm border border-blue-100" href="ta_profile.html">
+<div class="flex items-center">
+<span class="iconify mr-3 text-xl" data-icon="mdi:account-student"></span>
+<span class="font-medium">以 TA (学生) 身份登录</span>
+</div>
+<span class="iconify" data-icon="mdi:chevron-right"></span>
+</a>
+<a class="flex items-center justify-between w-full px-4 py-3 bg-emerald-50 text-emerald-700 rounded-xl hover:bg-emerald-100 transition shadow-sm border border-emerald-100" href="mo_management.html">
+<div class="flex items-center">
+<span class="iconify mr-3 text-xl" data-icon="mdi:briefcase-account"></span>
+<span class="font-medium">以 MO (教师) 身份登录</span>
+</div>
+<span class="iconify" data-icon="mdi:chevron-right"></span>
+</a>
+<a class="flex items-center justify-between w-full px-4 py-3 bg-purple-50 text-purple-700 rounded-xl hover:bg-purple-100 transition shadow-sm border border-purple-100" href="admin_dashboard.html">
+<div class="flex items-center">
+<span class="iconify mr-3 text-xl" data-icon="mdi:shield-account"></span>
+<span class="font-medium">以 管理员 身份登录</span>
+</div>
+<span class="iconify" data-icon="mdi:chevron-right"></span>
+</a>
+</div>
+</div>
+</div>
+<div class="mt-8 text-center">
+<p class="text-xs text-slate-400">© 2026 BUPT International School. All rights reserved.</p>
+</div>
+</div>
+</body>
+</html>

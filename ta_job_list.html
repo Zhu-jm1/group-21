@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>岗位大厅 - BUPT TA System</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+</head>
+<body class="bg-slate-50">
+<nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16">
+<div class="flex items-center">
+<span class="iconify text-blue-600 text-2xl mr-2" data-icon="mdi:school"></span>
+<span class="text-lg font-bold">BUPT TA 门户</span>
+</div>
+<div class="flex space-x-8 items-center">
+<a class="text-gray-500 hover:text-blue-600 px-1 pt-1 h-16 flex items-center" href="ta_profile.html">个人资料</a>
+<a class="text-blue-600 border-b-2 border-blue-600 px-1 pt-1 h-16 flex items-center font-medium" href="ta_job_list.html">岗位大厅</a>
+<a class="text-gray-500 hover:text-blue-600 px-1 pt-1 h-16 flex items-center" href="ta_applications.html">申请状态</a>
+</div>
+</div>
+</div>
+</nav>
+<header class="bg-white border-b border-slate-200 py-10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h1 class="text-3xl font-extrabold text-slate-900">岗位大厅</h1>
+<p class="text-slate-500 mt-2">发现适合你的 2026 春季学期助教岗位</p>
+<div class="mt-8 flex gap-4">
+<div class="flex-grow relative">
+<span class="iconify absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl" data-icon="mdi:magnify"></span>
+<input class="w-full pl-12 pr-4 py-3 bg-slate-100 border-transparent rounded-xl focus:bg-white focus:ring-2 focus:ring-blue-500 transition" placeholder="搜索课程名称代码 (如: EBU6304) 或 MO 教师姓名..." type="text"/>
+</div>
+<button class="px-6 py-3 bg-slate-900 text-white rounded-xl flex items-center font-medium hover:bg-slate-800 transition">
+                    筛选岗位
+                </button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-lg font-semibold text-slate-800">所有岗位 (12)</h2>
+<div class="flex items-center text-sm text-slate-500">
+                排序: <span class="text-blue-600 font-medium ml-1 cursor-pointer">截止日期 (倒序)</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Job Card 1 -->
+<div class="bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-xl transition-shadow group">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">EBU6304</div>
+<span class="text-red-500 text-sm font-medium flex items-center">
+<span class="iconify mr-1" data-icon="mdi:clock-outline"></span> 剩 3 天
+                    </span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition">Software Engineering</h3>
+<p class="text-slate-500 text-sm mb-4 line-clamp-2">协助 MO 组织 Story Writing 研讨会，指导学生完成原型设计迭代...</p>
+<div class="flex items-center text-slate-600 text-sm mb-6">
+<span class="iconify mr-2" data-icon="mdi:account-tie"></span> MO: Dr. Wang
+                    <span class="mx-3 text-slate-300">|</span>
+<span class="iconify mr-2" data-icon="mdi:map-marker"></span> 国际学院教一楼
+                </div>
+<a class="block w-full text-center py-3 bg-slate-50 text-slate-700 font-semibold rounded-xl group-hover:bg-blue-600 group-hover:text-white transition" href="ta_job_detail.html">查看详情 &amp; 申请</a>
+</div>
+<!-- Job Card 2 -->
+<div class="bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-xl transition-shadow group">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">EBU5402</div>
+<span class="text-slate-400 text-sm font-medium flex items-center">
+                         截止于 2026-03-30
+                    </span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition">Network Programming</h3>
+<p class="text-slate-500 text-sm mb-4 line-clamp-2">承担 Java 网络编程的实验课辅助，批改每周作业...</p>
+<div class="flex items-center text-slate-600 text-sm mb-6">
+<span class="iconify mr-2" data-icon="mdi:account-tie"></span> MO: Prof. Li
+                    <span class="mx-3 text-slate-300">|</span>
+<span class="iconify mr-2" data-icon="mdi:map-marker"></span> 实验楼 302
+                </div>
+<a class="block w-full text-center py-3 bg-slate-50 text-slate-700 font-semibold rounded-xl group-hover:bg-blue-600 group-hover:text-white transition" href="ta_job_detail.html">查看详情 &amp; 申请</a>
+</div>
+<!-- More cards ... -->
+<div class="bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-xl transition-shadow group">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">EBU4201</div>
+<span class="text-slate-400 text-sm font-medium">截止于 2026-04-05</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition">Database Systems</h3>
+<p class="text-slate-500 text-sm mb-4 line-clamp-2">管理 SQL 实验室环境，解答学生关于数据库范式的疑问...</p>
+<div class="flex items-center text-slate-600 text-sm mb-6">
+<span class="iconify mr-2" data-icon="mdi:account-tie"></span> MO: Dr. Smith
+                    <span class="mx-3 text-slate-300">|</span>
+<span class="iconify mr-2" data-icon="mdi:map-marker"></span> 在线/远程
+                </div>
+<a class="block w-full text-center py-3 bg-slate-50 text-slate-700 font-semibold rounded-xl group-hover:bg-blue-600 group-hover:text-white transition" href="ta_job_detail.html">查看详情 &amp; 申请</a>
+</div>
+</div>
+</main>
+</body>
+</html>

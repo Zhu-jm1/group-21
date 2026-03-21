@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>管理员控制台 - BUPT TA System</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+</head>
+<body class="bg-gray-100 flex min-h-screen">
+<aside class="w-64 bg-slate-900 text-white">
+<div class="p-6">
+<h2 class="text-xl font-bold flex items-center"><span class="iconify mr-2" data-icon="mdi:shield-check"></span> Admin Panel</h2>
+</div>
+<nav class="mt-6">
+<a class="flex items-center px-6 py-4 bg-blue-600 text-white" href="admin_dashboard.html"><span class="iconify mr-3" data-icon="mdi:view-dashboard"></span> 已发布岗位</a>
+<a class="flex items-center px-6 py-4 text-slate-400 hover:bg-slate-800 hover:text-white transition" href="admin_workload.html"><span class="iconify mr-3" data-icon="mdi:chart-bar"></span> 工作量统计</a>
+<a class="flex items-center px-6 py-4 text-slate-400 hover:bg-red-900 transition mt-auto" href="index.html"><span class="iconify mr-3" data-icon="mdi:logout"></span> 登出系统</a>
+</nav>
+</aside>
+<main class="flex-grow p-10 overflow-y-auto">
+<div class="flex justify-between items-center mb-8">
+<h1 class="text-2xl font-bold text-gray-800">全院招聘概览 (2026 Spring)</h1>
+<a class="px-6 py-2 bg-blue-600 text-white rounded-lg flex items-center hover:bg-blue-700 transition" href="mo_post_job.html">
+<span class="iconify mr-2" data-icon="mdi:plus"></span> 发布新招聘
+            </a>
+</div>
+<div class="grid grid-cols-4 gap-6 mb-8">
+<div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+<p class="text-gray-400 text-sm font-medium">总岗位数</p>
+<p class="text-3xl font-bold">24</p>
+<p class="text-green-500 text-xs mt-1">↑ 12% 同比去年</p>
+</div>
+<div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+<p class="text-gray-400 text-sm font-medium">总申请人数</p>
+<p class="text-3xl font-bold">156</p>
+<p class="text-blue-500 text-xs mt-1">平均每岗 6.5 人</p>
+</div>
+<div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+<p class="text-gray-400 text-sm font-medium">已录用 TA</p>
+<p class="text-3xl font-bold">42</p>
+<p class="text-slate-400 text-xs mt-1">完成率: 58%</p>
+</div>
+<div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+<p class="text-gray-400 text-sm font-medium">未处理反馈</p>
+<p class="text-3xl font-bold">8</p>
+<p class="text-red-500 text-xs mt-1">需 MO 尽快回复</p>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+<div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
+<h3 class="font-bold">当前学期所有岗位详情</h3>
+<div class="flex gap-2">
+<button class="text-sm px-3 py-1 border rounded bg-white">全部学院</button>
+<button class="text-sm px-3 py-1 border rounded bg-white font-medium text-blue-600 border-blue-600">IS 学院</button>
+</div>
+</div>
+<table class="w-full text-left">
+<thead class="bg-gray-50 text-xs text-gray-500 uppercase tracking-widest border-b">
+<tr>
+<th class="px-6 py-4">课程代码</th>
+<th class="px-6 py-4">课程名称</th>
+<th class="px-6 py-4">负责人 (MO)</th>
+<th class="px-6 py-4 text-center">招募数/需求数</th>
+<th class="px-6 py-4">发布状态</th>
+<th class="px-6 py-4">操作</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-50 text-sm">
+<tr>
+<td class="px-6 py-4 font-mono font-bold">EBU6304</td>
+<td class="px-6 py-4">Software Engineering</td>
+<td class="px-6 py-4">Dr. Wang</td>
+<td class="px-6 py-4 text-center">
+<div class="flex items-center justify-center">
+<span class="font-bold text-slate-800">4</span> / <span class="text-slate-400 ml-1">4</span>
+<span class="iconify ml-2 text-green-500" data-icon="mdi:check-circle"></span>
+</div>
+</td>
+<td class="px-6 py-4"><span class="px-2 py-1 bg-green-50 text-green-600 rounded text-xs font-medium">正在招募</span></td>
+<td class="px-6 py-4 flex space-x-3">
+<button class="text-blue-600 hover:underline">编辑</button>
+<button class="text-slate-400 hover:text-red-600 transition">下架</button>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 font-mono font-bold">EBU4201</td>
+<td class="px-6 py-4">Database Systems</td>
+<td class="px-6 py-4">Dr. Wu</td>
+<td class="px-6 py-4 text-center">
+<div class="flex items-center justify-center">
+<span class="font-bold text-slate-800">1</span> / <span class="text-slate-400 ml-1">3</span>
+</div>
+</td>
+<td class="px-6 py-4"><span class="px-2 py-1 bg-amber-50 text-amber-600 rounded text-xs font-medium">紧急补录</span></td>
+<td class="px-6 py-4 flex space-x-3">
+<button class="text-blue-600 hover:underline">编辑</button>
+<button class="text-slate-400 hover:text-red-600 transition">下架</button>
+</td>
+</tr>
+<!-- More mock rows ... -->
+</tbody>
+</table>
+</div>
+</main>
+</body>
+</html>

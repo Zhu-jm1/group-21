@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>工作量统计 - BUPT TA System</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+</head>
+<body class="bg-gray-100 flex min-h-screen">
+<aside class="w-64 bg-slate-900 text-white">
+<div class="p-6">
+<h2 class="text-xl font-bold flex items-center"><span class="iconify mr-2" data-icon="mdi:shield-check"></span> Admin Panel</h2>
+</div>
+<nav class="mt-6">
+<a class="flex items-center px-6 py-4 text-slate-400 hover:bg-slate-800 transition" href="admin_dashboard.html"><span class="iconify mr-3" data-icon="mdi:view-dashboard"></span> 已发布岗位</a>
+<a class="flex items-center px-6 py-4 bg-blue-600 text-white" href="admin_workload.html"><span class="iconify mr-3" data-icon="mdi:chart-bar"></span> 工作量统计</a>
+<a class="flex items-center px-6 py-4 text-slate-400 hover:bg-red-900 transition mt-auto" href="index.html"><span class="iconify mr-3" data-icon="mdi:logout"></span> 登出系统</a>
+</nav>
+</aside>
+<main class="flex-grow p-10 overflow-y-auto">
+<div class="flex justify-between items-center mb-8">
+<div>
+<h1 class="text-2xl font-bold text-gray-800">TA 工作量负载监控</h1>
+<p class="text-gray-500 text-sm">防止单个 TA 承担超额负荷 (阈值: 20hrs/week)</p>
+</div>
+<button class="px-5 py-2 bg-white border border-gray-300 rounded-lg flex items-center text-sm font-medium">
+<span class="iconify mr-2" data-icon="mdi:download"></span> 导出 CSV
+            </button>
+</div>
+<div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+<table class="w-full text-left">
+<thead class="bg-slate-50 border-b border-gray-200">
+<tr>
+<th class="px-8 py-5 text-gray-700">TA 姓名 (学号)</th>
+<th class="px-8 py-5 text-gray-700">所在课程模块</th>
+<th class="px-8 py-5 text-gray-700 text-center">总计工时/周</th>
+<th class="px-8 py-5 text-gray-700">负载评估</th>
+<th class="px-8 py-5 text-gray-700">操作</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-100">
+<tr class="hover:bg-gray-50/50">
+<td class="px-8 py-5">
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 font-bold mr-3">ZH</div>
+<div>
+<p class="font-bold">张小明</p>
+<p class="text-xs text-gray-400">2022211001</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-5">
+<div class="flex flex-wrap gap-2">
+<span class="bg-blue-50 text-blue-600 px-2 py-1 rounded text-xs border border-blue-100">OOP (10h)</span>
+<span class="bg-indigo-50 text-indigo-600 px-2 py-1 rounded text-xs border border-indigo-100">Math II (6h)</span>
+</div>
+</td>
+<td class="px-8 py-5 text-center font-mono font-bold text-lg">16h</td>
+<td class="px-8 py-5 text-green-600 font-medium flex items-center pt-8">
+<span class="iconify mr-1" data-icon="mdi:checkbox-marked-circle"></span> 正常健康
+                        </td>
+<td class="px-8 py-5 text-blue-600 cursor-pointer">详情</td>
+</tr>
+<tr class="hover:bg-gray-50/50">
+<td class="px-8 py-5">
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-700 font-bold mr-3">LS</div>
+<div>
+<p class="font-bold">李华</p>
+<p class="text-xs text-gray-400">2021211045</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-5">
+<div class="flex flex-wrap gap-2">
+<span class="bg-blue-50 text-blue-600 px-2 py-1 rounded text-xs border border-blue-100">Database (8h)</span>
+<span class="bg-slate-50 text-slate-600 px-2 py-1 rounded text-xs border border-slate-200">Network (8h)</span>
+<span class="bg-purple-50 text-purple-600 px-2 py-1 rounded text-xs border border-purple-100">Project Man. (6h)</span>
+</div>
+</td>
+<td class="px-8 py-5 text-center font-mono font-bold text-lg text-red-600">22h</td>
+<td class="px-8 py-5 text-red-600 font-medium flex items-center pt-8">
+<span class="iconify mr-1" data-icon="mdi:alert-decagram"></span> 超负荷
+                        </td>
+<td class="px-8 py-5 text-blue-600 cursor-pointer">详情</td>
+</tr>
+</tbody>
+</table>
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MO 管理中心 - BUPT TA System</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+</head>
+<body class="bg-slate-50">
+<nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-x-8 h-16 flex items-center">
+<div class="flex items-center mr-8">
+<span class="iconify text-emerald-600 text-2xl mr-2" data-icon="mdi:briefcase-account"></span>
+<span class="text-lg font-bold">MO 管理工作台</span>
+</div>
+<a class="text-emerald-700 border-b-2 border-emerald-600 font-medium px-2 py-1 h-16 flex items-center" href="mo_management.html">岗位管理</a>
+<a class="text-slate-500 hover:text-emerald-600 px-2 py-1 h-16 flex items-center" href="mo_post_job.html">发布新招聘</a>
+<div class="flex-grow"></div>
+<div class="flex items-center bg-slate-100 px-3 py-1 rounded-full text-sm">
+<span class="font-bold mr-1 italic text-emerald-700">Prof. Dr. Wang</span> (Module Organiser)
+            </div>
+<a class="text-gray-400 hover:text-red-500" href="index.html"><span class="iconify text-xl" data-icon="mdi:logout"></span></a>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto py-10 px-4">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+<!-- Course Management -->
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<h2 class="text-2xl font-bold flex items-center">
+<span class="iconify mr-2 text-emerald-600" data-icon="mdi:book-open-page-variant"></span> 我负责的课程 (2)
+                    </h2>
+</div>
+<div class="bg-white rounded-2xl border border-emerald-100 overflow-hidden shadow-sm">
+<div class="p-6 border-b border-emerald-50">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs text-emerald-600 font-bold mb-1">EBU6304</p>
+<h3 class="text-xl font-bold">Software Engineering</h3>
+<p class="text-slate-400 text-sm mt-1">2026 Spring Semester</p>
+</div>
+<span class="inline-flex items-center px-2 py-1 bg-emerald-50 text-emerald-700 text-xs rounded-lg font-bold">核心必修课</span>
+</div>
+</div>
+<div class="p-6 flex justify-between items-center bg-emerald-50/20">
+<div class="flex -space-x-3">
+<img alt="TA" class="w-10 h-10 rounded-full border-2 border-white" src="https://modao.cc/agent-py/media/generated_images/2026-03-21/779e7d869ec94cbbb770ac5e8309eb8e.jpg"/>
+<img alt="TA" class="w-10 h-10 rounded-full border-2 border-white" src="https://modao.cc/agent-py/media/generated_images/2026-03-21/779e7d869ec94cbbb770ac5e8309eb8e.jpg"/>
+<div class="w-10 h-10 rounded-full bg-slate-200 border-2 border-white flex items-center justify-center text-xs text-slate-500 font-bold">+2</div>
+</div>
+<a class="px-5 py-2 bg-emerald-600 text-white rounded-xl text-sm font-bold shadow-lg shadow-emerald-100 hover:bg-emerald-700 transition" href="mo_review.html">管理 TA 与 岗位</a>
+</div>
+</div>
+<div class="bg-white rounded-2xl border border-slate-200 overflow-hidden opacity-80 hover:opacity-100 transition">
+<div class="p-6 border-b border-slate-100">
+<p class="text-xs text-slate-400 font-bold mb-1">EBU5102</p>
+<h3 class="text-xl font-bold">Advanced Algorithms</h3>
+</div>
+<div class="p-6 flex justify-between items-center bg-slate-50/50">
+<p class="text-slate-400 text-sm">当前暂无发布岗位</p>
+<a class="px-5 py-2 border border-slate-300 rounded-xl text-sm font-bold hover:bg-white" href="mo_post_job.html">发布新职位</a>
+</div>
+</div>
+</div>
+<!-- Recent Task / Notifications -->
+<div class="space-y-6">
+<h2 class="text-2xl font-bold flex items-center">
+<span class="iconify mr-2 text-blue-600" data-icon="mdi:bell-outline"></span> 待办中心
+                </h2>
+<div class="bg-white rounded-2xl border border-slate-200 p-8 space-y-6">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center text-orange-600 flex-shrink-0">
+<span class="iconify text-2xl" data-icon="mdi:file-search"></span>
+</div>
+<div>
+<p class="font-bold text-slate-800">简历评审待处理</p>
+<p class="text-slate-500 text-sm mt-1">Software Engineering 岗位收到了 5 份新申请，请尽快筛选。</p>
+<a class="inline-block mt-3 text-sm text-blue-600 font-bold hover:underline" href="mo_review.html">去处理 (5) →</a>
+</div>
+</div>
+<hr class="border-slate-100"/>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0">
+<span class="iconify text-2xl" data-icon="mdi:calendar-check"></span>
+</div>
+<div>
+<p class="font-bold text-slate-800">岗前培训确认</p>
+<p class="text-slate-500 text-sm mt-1">管理员已批准您的 TA 录用名单，请确认培训时间。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body>
+</html>

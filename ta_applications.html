@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>申请状态 - BUPT TA System</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+</head>
+<body class="bg-gray-50">
+<nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16">
+<div class="flex items-center">
+<span class="iconify text-blue-600 text-2xl mr-2" data-icon="mdi:school"></span>
+<span class="text-lg font-bold">BUPT TA 门户</span>
+</div>
+<div class="flex space-x-8 items-center">
+<a class="text-gray-500 hover:text-blue-600 px-1 pt-1 h-16 flex items-center" href="ta_profile.html">个人资料</a>
+<a class="text-gray-500 hover:text-blue-600 px-1 pt-1 h-16 flex items-center" href="ta_job_list.html">岗位大厅</a>
+<a class="text-blue-600 border-b-2 border-blue-600 px-1 pt-1 h-16 flex items-center" href="ta_applications.html">申请状态</a>
+</div>
+</div>
+</div>
+</nav>
+<main class="max-w-6xl mx-auto py-12 px-4">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h1 class="text-3xl font-bold text-gray-900">我的申请追踪</h1>
+<p class="text-gray-500 mt-2">共申请了 3 个岗位</p>
+</div>
+<div class="flex space-x-2">
+<span class="px-3 py-1 bg-white border border-gray-200 rounded-lg text-sm text-gray-600 uppercase">2026 Spring</span>
+</div>
+</div>
+<div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden text-sm lg:text-base">
+<table class="w-full text-left">
+<thead class="bg-gray-50 border-b border-gray-100">
+<tr>
+<th class="px-6 py-4 font-bold text-gray-700">岗位 &amp; 课程号</th>
+<th class="px-6 py-4 font-bold text-gray-700">申请日期</th>
+<th class="px-6 py-4 font-bold text-gray-700">当前状态</th>
+<th class="px-6 py-4 font-bold text-gray-700">审批意见 / 反馈</th>
+<th class="px-6 py-4 font-bold text-gray-700">操作</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-50">
+<tr class="hover:bg-gray-50/50 transition">
+<td class="px-6 py-4 text-blue-600 font-medium">Software Engineering (EBU6304)</td>
+<td class="px-6 py-4 text-gray-400">2026-03-21</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+<span class="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2"></span> 审核中 (Pending)
+                            </span>
+</td>
+<td class="px-6 py-4 text-gray-400 italic">尚未处里...</td>
+<td class="px-6 py-4"><button class="text-gray-400 hover:text-red-500">撤回申请</button></td>
+</tr>
+<tr class="hover:bg-gray-50/50 transition">
+<td class="px-6 py-4 font-medium">Object Oriented Programming (EBU5302)</td>
+<td class="px-6 py-4 text-gray-400">2026-03-18</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-2"></span> 已录用 (Accepted)
+                            </span>
+</td>
+<td class="px-6 py-4 text-gray-800">欢迎加入团队！请于下周一参加岗前线上说明会。</td>
+<td class="px-6 py-4"><button class="px-3 py-1 bg-emerald-600 text-white rounded-lg text-xs">查看协议</button></td>
+</tr>
+<tr class="hover:bg-gray-50/50 transition">
+<td class="px-6 py-4 font-medium">Research Project A (EBU6211)</td>
+<td class="px-6 py-4 text-gray-400">2026-03-10</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+<span class="w-1.5 h-1.5 rounded-full bg-red-500 mr-2"></span> 未通过 (Rejected)
+                            </span>
+</td>
+<td class="px-6 py-4 text-gray-500">很遗憾，该岗位优先选择大四具有相关实验室经验的学生。</td>
+<td class="px-6 py-4"><span class="text-gray-300">-</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</main>
+</body>
+</html>

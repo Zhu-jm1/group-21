@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>简历筛选 - BUPT TA System</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+</head>
+<body class="bg-slate-50">
+<nav class="bg-white border-b border-slate-200 h-16 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 h-full flex items-center">
+<a class="flex items-center text-slate-400 hover:text-emerald-600" href="mo_management.html">
+<span class="iconify mr-2 text-xl" data-icon="mdi:arrow-left"></span> 返回岗位管理
+            </a>
+<div class="ml-auto flex items-center gap-4">
+<span class="text-slate-400 text-sm">当前筛选岗位:</span>
+<span class="font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-lg border border-emerald-100">EBU6304 Software Engineering</span>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto py-10 px-4">
+<div class="flex gap-8">
+<!-- Filters Sidebar -->
+<div class="w-72 flex-shrink-0 space-y-6">
+<div class="bg-white p-6 rounded-2xl border border-slate-200">
+<h3 class="font-bold mb-4">自动评分筛选 (AI)</h3>
+<div class="space-y-3">
+<label class="flex items-center text-sm">
+<input checked="" class="mr-2 rounded" type="checkbox"/> 技能匹配度 &gt; 80%
+                        </label>
+<label class="flex items-center text-sm text-slate-400">
+<input class="mr-2 rounded grayscale" type="checkbox"/> GPA &gt; 3.5 (可选)
+                        </label>
+<label class="flex items-center text-sm">
+<input class="mr-2 rounded" type="checkbox"/> 英语流利度 - 高
+                        </label>
+</div>
+</div>
+<div class="bg-emerald-600 p-6 rounded-2xl text-white shadow-lg shadow-emerald-100">
+<p class="text-xs uppercase tracking-widest opacity-80 mb-2">招聘进度</p>
+<p class="text-3xl font-bold italic">4 / 4</p>
+<p class="text-sm mt-1">需求已完成 - 审批中</p>
+</div>
+</div>
+<!-- Applicants List -->
+<div class="flex-grow space-y-4">
+<div class="flex justify-between items-center bg-white p-4 rounded-xl border border-slate-200">
+<p class="text-slate-600 font-medium">候选项 (5)</p>
+<div class="flex items-center text-sm text-slate-400 space-x-4">
+<span>全部全中</span>
+<span>批量录用</span>
+</div>
+</div>
+<!-- Applicant Card 1 -->
+<div class="bg-white rounded-2xl border border-slate-200 overflow-hidden hover:border-emerald-300 transition group p-6">
+<div class="flex items-start gap-6">
+<img alt="Zhang" class="w-16 h-16 rounded-2xl object-cover" src="https://modao.cc/agent-py/media/generated_images/2026-03-21/9cd0538b04214abcaaf435549b379983.jpg"/>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<div class="flex items-center gap-2">
+<h4 class="text-lg font-bold">张小明</h4>
+<span class="px-2 py-0.5 bg-blue-50 text-blue-600 text-xs rounded border border-blue-100 uppercase tracking-tighter">AI Match: 95%</span>
+</div>
+<p class="text-sm text-slate-500 mb-2">研究生 · 人工智能领域 · 精通 Java/Scrum</p>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-2 bg-emerald-600 text-white rounded-xl text-sm font-bold shadow-md hover:bg-emerald-700 transition">录用</button>
+<button class="px-4 py-2 border border-slate-200 text-slate-500 rounded-xl text-sm font-bold hover:bg-red-50 hover:text-red-500 transition border hover:border-red-200">拒绝</button>
+</div>
+</div>
+<div class="bg-slate-50 rounded-xl p-4 mt-4">
+<p class="text-sm text-slate-700 leading-relaxed italic border-l-4 border-blue-400 pl-3">
+                                     "曾担任过大一 OOP 助教，非常熟悉国际学院的 Viva 流程，并且我可以灵活处理高峰期的工作负载..."
+                                 </p>
+</div>
+<div class="mt-4 flex gap-4">
+<a class="text-blue-600 text-sm font-medium flex items-center hover:underline" href="#">
+<span class="iconify mr-1" data-icon="mdi:file-pdf-box"></span> 查看原始简历
+                                 </a>
+<span class="text-slate-300">|</span>
+<span class="text-xs text-slate-400 flex items-center">
+                                      申请于 2026-03-21
+                                 </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Applicant Card 2 -->
+<div class="bg-white rounded-2xl border border-slate-200 p-6 opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition">
+<div class="flex items-start gap-6">
+<img alt="Li" class="w-16 h-16 rounded-2xl object-cover" src="https://modao.cc/agent/placeholder.svg"/>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<div class="flex items-center gap-2">
+<h4 class="text-lg font-bold">李思</h4>
+<span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-xs rounded border border-slate-100 uppercase tracking-tighter">AI Match: 62%</span>
+</div>
+<p class="text-sm text-slate-500 mb-2">本科 · 软件工程 · 有 Web 开发基础</p>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-2 bg-slate-400 text-white rounded-xl text-sm font-bold cursor-not-allowed" disabled="">名额已满</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body>
+</html>
