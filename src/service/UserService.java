@@ -24,6 +24,7 @@ public class UserService {
                 System.err.println("[错误] 无法创建数据文件");
             }
         }
+        TAProfileService.init();
     }
 
     // 验证登录
