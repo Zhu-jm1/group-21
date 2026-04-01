@@ -157,8 +157,20 @@ public class LoginUI extends JFrame {
             msgLabel.setForeground(new Color(0, 128, 0));
             msgLabel.setText("登录成功！欢迎 " + username);
             System.out.println("登录: " + username + " | 角色: " + roleKey);
-            // 后续跳转不同页面
-            // if ("admin".equals(roleKey)) new AdminUI().setVisible(true);
+
+            this.dispose();  // 关闭登录窗口
+
+            if ("ta".equals(roleKey)) {
+                new TAUI(username);  // TA 跳转到个人页面
+            } else if ("admin".equals(roleKey)) {
+                // 后续开发管理员页面
+                JOptionPane.showMessageDialog(this, "管理员页面开发中...");
+                new LoginUI();  // 暂时返回登录页
+            } else {
+                // MO 或其他角色
+                JOptionPane.showMessageDialog(this, "该角色页面开发中...");
+                new LoginUI();
+            }
         } else {
             msgLabel.setForeground(Color.RED);
             msgLabel.setText("账号、密码或身份不匹配");

@@ -1,0 +1,8 @@
+studentId=2023213088
+major=电信工程及管理
+grade=大三
+email=20051108@bupt.edu.cn
+phone=13930968188
+workHours=14：00-17：00
+skills=java
+isComplete=true
