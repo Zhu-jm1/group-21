@@ -11,6 +11,7 @@ com\bupt\controller\RegisterServlet.class
 com\bupt\filter\AuthFilter.class
 com\bupt\model\Job.class
 com\bupt\dao\UserDao.class
+com\bupt\util\CvStorage.class
 com\bupt\controller\JobServlet.class
 com\bupt\service\UserService.class
 com\bupt\controller\ApplicationServlet.class
