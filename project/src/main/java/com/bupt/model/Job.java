@@ -44,6 +44,11 @@ public class Job {
     public String getCreatedDate() { return createdDate; }
     public void setCreatedDate(String createdDate) { this.createdDate = createdDate; }
 
+    private int matchScore;
+
+    public int getMatchScore() { return matchScore; }
+    public void setMatchScore(int matchScore) { this.matchScore = matchScore; }
+
     public String toFileLine() {
         return String.join("|",
                 safe(id), safe(title), safe(description), safe(moduleName),

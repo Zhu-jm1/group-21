@@ -26,7 +26,11 @@ public class JobServlet extends HttpServlet {
 
         switch (action) {
             case "list":
-                req.setAttribute("jobs", jobService.getOpenJobs());
+                if (user != null && "TA".equals(user.getRole())) {
+                    req.setAttribute("jobs", jobService.getOpenJobsForUser(user));
+                } else {
+                    req.setAttribute("jobs", jobService.getOpenJobs());
+                }
                 req.getRequestDispatcher("/WEB-INF/views/job/list.jsp").forward(req, resp);
                 break;
             case "myJobs":
@@ -38,6 +42,9 @@ public class JobServlet extends HttpServlet {
             case "detail":
                 String jobId = req.getParameter("id");
                 Job job = jobService.getJobById(jobId);
+                if (job != null && user != null && "TA".equals(user.getRole())) {
+                    job.setMatchScore(jobService.calculateMatchScore(user, job));
+                }
                 req.setAttribute("job", job);
                 req.setAttribute("applications", appService.getByJob(jobId));
                 req.getRequestDispatcher("/WEB-INF/views/job/detail.jsp").forward(req, resp);

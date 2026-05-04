@@ -2,6 +2,9 @@ package com.bupt.service;
 
 import com.bupt.dao.JobDao;
 import com.bupt.model.Job;
+import com.bupt.model.User;
+import com.bupt.util.AIService;
+import com.bupt.util.MatchUtil;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -11,9 +14,28 @@ import java.util.List;
 public class JobService {
 
     private final JobDao jobDao = new JobDao();
+    private final AIService aiService = new AIService();
 
     public List<Job> getOpenJobs() {
         return jobDao.findOpenJobs();
+    }
+
+    public List<Job> getOpenJobsForUser(User user) {
+        List<Job> jobs = jobDao.findOpenJobs();
+        if (user != null && "TA".equals(user.getRole())) {
+            for (Job job : jobs) {
+                job.setMatchScore(calculateMatchScore(user, job));
+            }
+            jobs.sort((a, b) -> Integer.compare(b.getMatchScore(), a.getMatchScore()));
+        }
+        return jobs;
+    }
+
+    public int calculateMatchScore(User user, Job job) {
+        if (aiService.isEnabled()) {
+            return aiService.calculateMatchScore(user, job);
+        }
+        return MatchUtil.calculateMatchScore(user, job);
     }
 
     public List<Job> getJobsByMO(String moId) {
