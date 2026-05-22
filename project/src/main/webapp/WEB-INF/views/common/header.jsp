@@ -43,13 +43,21 @@
             <c:if test="${currentUser.role == 'TA'}">
                 <a href="${pageContext.request.contextPath}/jobs?action=list">Jobs</a>
                 <a href="${pageContext.request.contextPath}/applications?action=myApplications">My Applications</a>
+                <a href="${pageContext.request.contextPath}/ai?action=skillGap">Skill Gap</a>
+                <a href="${pageContext.request.contextPath}/reminders">Reminders</a>
+                <a href="${pageContext.request.contextPath}/resume">Resume</a>
             </c:if>
             <c:if test="${currentUser.role == 'MO'}">
                 <a href="${pageContext.request.contextPath}/jobs?action=myJobs">My Jobs</a>
                 <a href="${pageContext.request.contextPath}/jobs?action=create">Post Job</a>
+                <a href="${pageContext.request.contextPath}/ai?action=match">AI Match</a>
             </c:if>
             <c:if test="${currentUser.role == 'ADMIN'}">
-                <a href="${pageContext.request.contextPath}/applications?action=workload">Workload</a>
+                <a href="${pageContext.request.contextPath}/admin?action=dashboard">Dashboard</a>
+                <a href="${pageContext.request.contextPath}/admin?action=workload">Workload</a>
+                <a href="${pageContext.request.contextPath}/admin?action=users">Users</a>
+                <a href="${pageContext.request.contextPath}/admin?action=aiAllocate">AI Allocate</a>
+                <a href="${pageContext.request.contextPath}/ai?action=match">AI Match</a>
             </c:if>
             <a href="${pageContext.request.contextPath}/profile">Profile</a>
             <a href="${pageContext.request.contextPath}/logout">Logout</a>

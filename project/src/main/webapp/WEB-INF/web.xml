@@ -91,6 +91,54 @@
         <url-pattern>/profile</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>adminServlet</servlet-name>
+        <servlet-class>com.bupt.controller.AdminServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>adminServlet</servlet-name>
+        <url-pattern>/admin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>aiServlet</servlet-name>
+        <servlet-class>com.bupt.controller.AIServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>aiServlet</servlet-name>
+        <url-pattern>/ai</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>exportServlet</servlet-name>
+        <servlet-class>com.bupt.controller.ExportServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>exportServlet</servlet-name>
+        <url-pattern>/export</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>reminderServlet</servlet-name>
+        <servlet-class>com.bupt.controller.ReminderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>reminderServlet</servlet-name>
+        <url-pattern>/reminders</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>resumeServlet</servlet-name>
+        <servlet-class>com.bupt.controller.ResumeServlet</servlet-class>
+        <multipart-config>
+            <max-file-size>5242880</max-file-size>
+        </multipart-config>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>resumeServlet</servlet-name>
+        <url-pattern>/resume</url-pattern>
+    </servlet-mapping>
+
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>

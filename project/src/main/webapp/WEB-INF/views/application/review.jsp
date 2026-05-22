@@ -16,16 +16,18 @@
                 <th>Actions</th>
             </tr>
             <c:forEach var="app" items="${applications}">
+                <c:set var="applicant" value="${applicantMap[app.applicantId]}" />
                 <tr>
-                    <td>${applicantMap[app.applicantId].name}</td>
-                    <td>${applicantMap[app.applicantId].skills}</td>
+                    <td>${applicant.name}</td>
+                    <td>${applicant.skills}</td>
                     <td>
                         <c:choose>
-                            <c:when test="${not empty applicantMap[app.applicantId].cvPath}">
-                                <a class="btn btn-primary" style="padding:4px 10px;font-size:13px;"
-                                   href="${pageContext.request.contextPath}/applications?action=downloadApplicantCv&amp;jobId=${jobId}&amp;applicantId=${app.applicantId}">Download</a>
+                            <c:when test="${not empty applicant.cvPath}">
+                                <a href="${pageContext.request.contextPath}/resume?action=download&amp;userId=${app.applicantId}" class="btn btn-primary">Download Resume</a>
                             </c:when>
-                            <c:otherwise><span style="color:#95a5a6;">—</span></c:otherwise>
+                            <c:otherwise>
+                                <span style="color:#95a5a6;">No resume uploaded</span>
+                            </c:otherwise>
                         </c:choose>
                     </td>
                     <td>${app.applyDate}</td>
