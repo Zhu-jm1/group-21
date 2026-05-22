@@ -37,7 +37,7 @@ public class LoginServlet extends HttpServlet {
                     resp.sendRedirect(req.getContextPath() + "/jobs?action=myJobs");
                     break;
                 case "ADMIN":
-                    resp.sendRedirect(req.getContextPath() + "/applications?action=workload");
+                    resp.sendRedirect(req.getContextPath() + "/admin?action=dashboard");
                     break;
                 default:
                     resp.sendRedirect(req.getContextPath() + "/login");
