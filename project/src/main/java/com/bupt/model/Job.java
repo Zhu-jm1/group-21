@@ -13,6 +13,8 @@ public class Job {
     private String postedBy;       // MO user id
     private String status;         // OPEN, CLOSED
     private String createdDate;
+    private String deadline;       // application deadline date
+    private int classHours;        // workload in class hours
 
     public Job() {}
 
@@ -44,15 +46,17 @@ public class Job {
     public String getCreatedDate() { return createdDate; }
     public void setCreatedDate(String createdDate) { this.createdDate = createdDate; }
 
-    private int matchScore;
+    public String getDeadline() { return deadline; }
+    public void setDeadline(String deadline) { this.deadline = deadline; }
 
-    public int getMatchScore() { return matchScore; }
-    public void setMatchScore(int matchScore) { this.matchScore = matchScore; }
+    public int getClassHours() { return classHours; }
+    public void setClassHours(int classHours) { this.classHours = classHours; }
 
     public String toFileLine() {
         return String.join("|",
                 safe(id), safe(title), safe(description), safe(moduleName),
-                safe(requiredSkills), safe(type), safe(postedBy), safe(status), safe(createdDate));
+                safe(requiredSkills), safe(type), safe(postedBy), safe(status), safe(createdDate),
+                safe(deadline), String.valueOf(classHours));
     }
 
     public static Job fromFileLine(String line) {
@@ -68,6 +72,10 @@ public class Job {
         j.setPostedBy(p[6]);
         j.setStatus(p[7]);
         if (p.length > 8) j.setCreatedDate(p[8]);
+        if (p.length > 9) j.setDeadline(p[9]);
+        if (p.length > 10) {
+            try { j.setClassHours(Integer.parseInt(p[10])); } catch (NumberFormatException e) { j.setClassHours(0); }
+        }
         return j;
     }
 
