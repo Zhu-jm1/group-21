@@ -21,7 +21,7 @@ public class UserService {
 
     public boolean register(User user) {
         if (userDao.findByUsername(user.getUsername()) != null) {
-            return false; // username already exists
+            return false;
         }
         userDao.save(user);
         return true;
@@ -43,5 +43,13 @@ public class UserService {
 
     public List<User> findAll() {
         return userDao.findAll();
+    }
+
+    public void deleteUser(String id) {
+        userDao.delete(id);
+    }
+
+    public void updateUser(User user) {
+        userDao.update(user);
     }
 }

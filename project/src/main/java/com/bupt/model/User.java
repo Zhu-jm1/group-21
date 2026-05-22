@@ -11,8 +11,10 @@ public class User {
     private String name;
     private String email;
     private String phone;
-    private String skills;   // comma-separated skills (for TA)
-    private String cvPath;   // CV file path (for TA)
+    private String skills;          // comma-separated skills (for TA)
+    private String cvPath;          // CV file path (for TA)
+    private String studentId;       // student ID (for TA)
+    private String reminderMethod;  // SMS or EMAIL (for TA)
 
     public User() {}
 
@@ -53,14 +55,21 @@ public class User {
     public String getCvPath() { return cvPath; }
     public void setCvPath(String cvPath) { this.cvPath = cvPath; }
 
+    public String getStudentId() { return studentId; }
+    public void setStudentId(String studentId) { this.studentId = studentId; }
+
+    public String getReminderMethod() { return reminderMethod; }
+    public void setReminderMethod(String reminderMethod) { this.reminderMethod = reminderMethod; }
+
     /**
      * Serialize to a line for txt storage.
-     * Format: id|username|password|role|name|email|phone|skills|cvPath
+     * Format: id|username|password|role|name|email|phone|skills|cvPath|studentId|reminderMethod
      */
     public String toFileLine() {
         return String.join("|",
                 safe(id), safe(username), safe(password), safe(role),
-                safe(name), safe(email), safe(phone), safe(skills), safe(cvPath));
+                safe(name), safe(email), safe(phone), safe(skills), safe(cvPath),
+                safe(studentId), safe(reminderMethod));
     }
 
     /**
@@ -79,6 +88,8 @@ public class User {
         if (parts.length > 6) u.setPhone(parts[6]);
         if (parts.length > 7) u.setSkills(parts[7]);
         if (parts.length > 8) u.setCvPath(parts[8]);
+        if (parts.length > 9) u.setStudentId(parts[9]);
+        if (parts.length > 10) u.setReminderMethod(parts[10]);
         return u;
     }
 
