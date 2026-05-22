@@ -26,6 +26,7 @@
             <select id="role" name="role" required>
                 <option value="TA">Teaching Assistant (TA)</option>
                 <option value="MO">Module Organiser (MO)</option>
+                <option value="ADMIN">Administrator (ADMIN)</option>
             </select>
         </div>
         <button type="submit" class="btn btn-primary">Register</button>

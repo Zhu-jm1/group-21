@@ -11,9 +11,6 @@
                 <th>Module</th>
                 <th>Type</th>
                 <th>Required Skills</th>
-                <c:if test="${currentUser != null && currentUser.role == 'TA'}">
-                    <th>Match</th>
-                </c:if>
                 <th>Posted Date</th>
                 <th>Action</th>
             </tr>
@@ -23,14 +20,6 @@
                     <td>${job.moduleName}</td>
                     <td>${job.type}</td>
                     <td>${job.requiredSkills}</td>
-                    <c:if test="${currentUser != null && currentUser.role == 'TA'}">
-                        <td>
-                            <c:choose>
-                                <c:when test="${job.matchScore > 0}">${job.matchScore}%</c:when>
-                                <c:otherwise>N/A</c:otherwise>
-                            </c:choose>
-                        </td>
-                    </c:if>
                     <td>${job.createdDate}</td>
                     <td>
                         <a href="${pageContext.request.contextPath}/jobs?action=detail&id=${job.id}" class="btn btn-primary">View</a>
