@@ -5,16 +5,16 @@
     <p><strong>Type:</strong> ${job.type}</p>
     <p><strong>Description:</strong> ${job.description}</p>
     <p><strong>Required Skills:</strong> ${job.requiredSkills}</p>
-    <c:if test="${currentUser != null && currentUser.role == 'TA'}">
-        <p><strong>智能匹配度:</strong> <c:choose>
-            <c:when test="${job.matchScore > 0}">${job.matchScore}%</c:when>
-            <c:otherwise>暂无匹配评分</c:otherwise>
-        </c:choose></p>
-    </c:if>
     <p><strong>Status:</strong>
         <span class="badge badge-${job.status == 'OPEN' ? 'open' : 'closed'}">${job.status}</span>
     </p>
     <p><strong>Posted:</strong> ${job.createdDate}</p>
+    <c:if test="${not empty job.deadline}">
+        <p><strong>Application Deadline:</strong> ${job.deadline}</p>
+    </c:if>
+    <c:if test="${job.classHours > 0}">
+        <p><strong>Class Hours:</strong> ${job.classHours}</p>
+    </c:if>
 
     <c:if test="${currentUser.role == 'TA' && job.status == 'OPEN'}">
         <hr style="margin:16px 0;">

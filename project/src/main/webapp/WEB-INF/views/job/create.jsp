@@ -27,6 +27,14 @@
             <label for="description">Description</label>
             <textarea id="description" name="description" rows="4"></textarea>
         </div>
+        <div class="form-group">
+            <label for="deadline">Application Deadline</label>
+            <input type="date" id="deadline" name="deadline">
+        </div>
+        <div class="form-group">
+            <label for="classHours">Class Hours (workload)</label>
+            <input type="number" id="classHours" name="classHours" min="0" value="0">
+        </div>
         <button type="submit" class="btn btn-success">Post Job</button>
     </form>
 </div>
