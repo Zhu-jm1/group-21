@@ -26,11 +26,7 @@ public class JobServlet extends HttpServlet {
 
         switch (action) {
             case "list":
-                if (user != null && "TA".equals(user.getRole())) {
-                    req.setAttribute("jobs", jobService.getOpenJobsForUser(user));
-                } else {
-                    req.setAttribute("jobs", jobService.getOpenJobs());
-                }
+                req.setAttribute("jobs", jobService.getOpenJobs());
                 req.getRequestDispatcher("/WEB-INF/views/job/list.jsp").forward(req, resp);
                 break;
             case "myJobs":
@@ -42,9 +38,6 @@ public class JobServlet extends HttpServlet {
             case "detail":
                 String jobId = req.getParameter("id");
                 Job job = jobService.getJobById(jobId);
-                if (job != null && user != null && "TA".equals(user.getRole())) {
-                    job.setMatchScore(jobService.calculateMatchScore(user, job));
-                }
                 req.setAttribute("job", job);
                 req.setAttribute("applications", appService.getByJob(jobId));
                 req.getRequestDispatcher("/WEB-INF/views/job/detail.jsp").forward(req, resp);
@@ -71,6 +64,12 @@ public class JobServlet extends HttpServlet {
             job.setRequiredSkills(req.getParameter("requiredSkills"));
             job.setType(req.getParameter("type"));
             job.setPostedBy(user.getId());
+            String deadline = req.getParameter("deadline");
+            if (deadline != null && !deadline.isEmpty()) job.setDeadline(deadline);
+            String hours = req.getParameter("classHours");
+            if (hours != null && !hours.isEmpty()) {
+                try { job.setClassHours(Integer.parseInt(hours)); } catch (NumberFormatException e) { job.setClassHours(0); }
+            }
             jobService.postJob(job);
             resp.sendRedirect(req.getContextPath() + "/jobs?action=myJobs");
         } else if ("close".equals(action)) {
